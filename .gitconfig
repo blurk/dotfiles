@@ -1,0 +1,9 @@
+[alias]
+	co = checkout
+	c = commit
+	s = status
+	p = pull
+	f = fetch
+	a = add
+[credential "https://github.com"]
+	username = blurk
