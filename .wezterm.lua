@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'GruvboxDarkHard'
+config.color_scheme = 'Gruvbox Dark (Gogh)'
 
 config.front_end = "OpenGL"
 config.max_fps = 144
