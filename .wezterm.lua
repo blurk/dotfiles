@@ -23,7 +23,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
 config.window_decorations = "NONE | RESIZE"
-config.default_prog = { "pwsh.exe", "-NoLogo" }
+config.default_prog = { "ubuntu.exe" }
 config.initial_cols = 80
 
 -- and finally, return the configuration to wezterm
