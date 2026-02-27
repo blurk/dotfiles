@@ -1,5 +1,4 @@
 #!/bin/bash
-# This script prints system info
 
 echo "Current user: $USER"
 echo "Home directory: $HOME"
