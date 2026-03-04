@@ -13,14 +13,20 @@ git, stow
 
 ## Installation
 
-First, check out the dotfiles repo in your $HOME directory using git
+1. check out the dotfiles repo in your $HOME directory using git
 
 ```
 git clone https://github.com/blurk/dotfiles.git
 cd dotfiles
 ```
 
-then use GNU stow to create symlinks
+2. Install needed packages
+```
+sudo apt update
+xargs -a packages.txt sudo apt install -y
+```
+
+3. use GNU stow to create symlinks
 
 ```
 stow .

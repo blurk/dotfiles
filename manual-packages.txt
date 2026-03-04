@@ -7,3 +7,4 @@ jq
 neovim
 zsh
 zoxide 
+stow
