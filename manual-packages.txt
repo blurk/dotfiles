@@ -6,3 +6,4 @@ fonts-powerline
 jq
 neovim
 zsh
+zoxide 
