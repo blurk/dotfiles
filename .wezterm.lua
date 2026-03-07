@@ -25,6 +25,7 @@ config.use_fancy_tab_bar = false
 config.window_decorations = "NONE | RESIZE"
 config.default_prog = { "ubuntu.exe" }
 config.initial_cols = 80
+config.audible_bell = "Disabled"
 
 -- and finally, return the configuration to wezterm
 return config
