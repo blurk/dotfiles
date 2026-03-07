@@ -27,6 +27,7 @@ xargs -a manual-packages.txt sudo apt install -y
 ```
 - [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 - [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
+- [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
 
 3. use GNU stow to create symlinks
 
