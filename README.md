@@ -23,8 +23,10 @@ cd dotfiles
 2. Install needed packages
 ```
 sudo apt update
-xargs -a packages.txt sudo apt install -y
+xargs -a manual-packages.txt sudo apt install -y
 ```
+- [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+- [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
 
 3. use GNU stow to create symlinks
 
