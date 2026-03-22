@@ -29,6 +29,10 @@ xargs -a manual-packages.txt sudo apt install -y
 - [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
 
+```
+cp default-packages $NVM_DIR
+```
+
 3. use GNU stow to create symlinks
 
 ```

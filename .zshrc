@@ -1,8 +1,9 @@
-export PATH="$PATH:$HOME/.local/bin/"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/snap/bin:$PATH"
 
 eval "$(oh-my-posh init zsh --config '~/dotfiles/mytheme.omp.json')"
 
-source ./.bash_aliases
+source ~/.bash_aliases
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -73,3 +74,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:/usr/local/go/bin
 
+. "$HOME/.local/bin/env"
