@@ -1,3 +1,5 @@
 pnpm
 yarn
 @antfu/ni
+tree-sitter-cli
+neovim
