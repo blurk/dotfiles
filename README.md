@@ -33,6 +33,12 @@ xargs -a manual-packages.txt sudo apt install -y
 cp default-packages $NVM_DIR
 ```
 
+```
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
+sudo apt install make gcc ripgrep fd-find tree-sitter-cli unzip git xclip neovim
+```
+
 3. use GNU stow to create symlinks
 
 ```

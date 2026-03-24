@@ -12,3 +12,8 @@ vim.keymap.set('n', '<leader>e', function()
     vim.cmd("Explore")
   end
 end, { silent = true, noremap = true })
+
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }

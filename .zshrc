@@ -74,4 +74,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:/usr/local/go/bin
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"

@@ -1,0 +1,14 @@
+return {
+  "neovim/nvim-lspconfig",
+  event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+      "williamboman/mason.nvim",
+    { "mason-org/mason-lspconfig.nvim", config = function() end },
+  {
+  "j-hui/fidget.nvim",
+  opts = {
+    -- options
+  },
+}
+  },
+}

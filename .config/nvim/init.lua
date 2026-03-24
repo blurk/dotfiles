@@ -8,5 +8,6 @@ vim.g.have_nerd_font = true
 require("config.editor")
 require("config.keymaps")
 require("config.misc")
+-- require("config.lsp")
 
 require("config.lazy")

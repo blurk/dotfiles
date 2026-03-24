@@ -1,0 +1,36 @@
+return {
+	"mason-org/mason.nvim",
+	dependencies = {
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+	},
+
+	config = function()
+		-- Enable mason
+		require("mason").setup({})
+
+		-- Install formatters, and linters
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"typescript-language-server",
+				"lua-language-server",
+				"tailwindcss-language-server",
+				"eslint-lsp",
+				"gopls",
+				"html-lsp",
+				"css-variables-language-server",
+				"css-lsp",
+				"cssmodules-language-server",
+				"docker-compose-language-service",
+				"docker-language-server",
+				"dockerfile-language-server",
+				"json-lsp",
+				"jsonlint",
+
+				"prettier", -- JavaScript/TypeScript formatter
+				"stylua", -- Lua formatter
+				"shellcheck", -- Shell script linter
+				"shfmt", -- Shell script formatter
+			},
+		})
+	end,
+}
