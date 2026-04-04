@@ -36,7 +36,15 @@ install_if_missing nvim neovim
 # NVM
 if ! command -v nvm &>/dev/null; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+    # Load nvm into current shell so we can use it right away
+    cp default-packages "$NVM_DIR"
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
+
+# Install latest Node LTS via nvm
+nvm install --lts
+nvm alias default lts/*
 
 # Oh My Posh
 if ! command -v oh-my-posh &>/dev/null; then
@@ -47,11 +55,6 @@ fi
 if [[ ! -d ~/.fzf ]]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install --all
-fi
-
-# Copy default packages for NVM
-if [[ -n "${NVM_DIR:-}" && -f default-packages ]]; then
-    cp default-packages "$NVM_DIR"
 fi
 
 mv ~/.zshrc ~/.zshrc.backup
