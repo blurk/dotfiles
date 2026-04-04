@@ -54,6 +54,7 @@ if [[ -n "${NVM_DIR:-}" && -f default-packages ]]; then
     cp default-packages "$NVM_DIR"
 fi
 
+mv ~/.zshrc ~/.zshrc.backup
 # Apply dotfiles with stow
 stow .
 
