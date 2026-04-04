@@ -38,10 +38,6 @@ if ! command -v nvm &>/dev/null; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 fi
 
-# Install latest Node LTS via nvm
-nvm install --lts
-nvm alias default lts/*
-
 # Oh My Posh
 if ! command -v oh-my-posh &>/dev/null; then
     curl -s https://ohmyposh.dev/install.sh | bash -s
@@ -64,3 +60,7 @@ exec zsh
 if [[ -n "${NVM_DIR:-}" && -f default-packages ]]; then
     cp default-packages "$NVM_DIR"
 fi
+
+# Install latest Node LTS via nvm
+nvm install --lts
+nvm alias default lts/*
