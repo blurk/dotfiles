@@ -8,5 +8,5 @@ zsh
 zoxide
 stow
 unzip
-realpath
-dirname
+coreutils
+build-essential
