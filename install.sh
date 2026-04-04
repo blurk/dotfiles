@@ -55,12 +55,3 @@ stow .
 
 # Switch to zsh at the end
 exec zsh
-
-# Copy default packages for NVM
-if [[ -n "${NVM_DIR:-}" && -f default-packages ]]; then
-    cp default-packages "$NVM_DIR"
-fi
-
-# Install latest Node LTS via nvm
-nvm install --lts
-nvm alias default lts/*
