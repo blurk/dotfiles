@@ -36,10 +36,6 @@ install_if_missing nvim neovim
 # NVM
 if ! command -v nvm &>/dev/null; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-    # Load nvm into current shell so we can use it right away
-    cp default-packages "$NVM_DIR"
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
 
 # Install latest Node LTS via nvm
@@ -63,3 +59,8 @@ stow .
 
 # Switch to zsh at the end
 exec zsh
+
+# Copy default packages for NVM
+if [[ -n "${NVM_DIR:-}" && -f default-packages ]]; then
+    cp default-packages "$NVM_DIR"
+fi
