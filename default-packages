@@ -3,3 +3,5 @@ yarn
 @antfu/ni
 tree-sitter-cli
 neovim
+@nestjs/cli
+postcss-cli
