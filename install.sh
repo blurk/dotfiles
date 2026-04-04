@@ -1,6 +1,9 @@
 #!/bin/bash
 
 sudo apt update
+sudo apt upgrade -y
+
+sudo apt update
 xargs -a manual-packages.txt sudo apt install -y
 
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
