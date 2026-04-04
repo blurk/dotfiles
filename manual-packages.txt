@@ -4,8 +4,9 @@ dash
 ffmpeg
 fonts-powerline
 jq
-neovim
 zsh
-zoxide 
+zoxide
 stow
 unzip
+realpath
+dirname
