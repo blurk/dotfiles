@@ -54,4 +54,5 @@ mv ~/.zshrc ~/.zshrc.backup
 stow .
 
 # Switch to zsh at the end
-exec zsh
+# exec zsh
+exec zsh -c "cp default-packages $NVM_DIR/default-packages; nvm install --lts; exec zsh"
