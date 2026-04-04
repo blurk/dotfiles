@@ -8,7 +8,7 @@ xargs -a manual-packages.txt sudo apt install -y
 
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
-sudo apt install make gcc ripgrep fd-find tree-sitter-cli unzip git xclip neovim
+sudo apt install make gcc ripgrep fd-find tree-sitter-cli unzip git xclip neovim -y
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
