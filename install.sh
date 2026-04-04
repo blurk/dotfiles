@@ -36,6 +36,14 @@ install_if_missing nvim neovim
 # NVM
 if ! command -v nvm &>/dev/null; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+    # Assuming you installed nvm in the default location (~/.nvm)
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+    cp default-packages "$NVM_DIR/default-packages"
+    # Now you can run nvm commands immediately
+    nvm install --lts
 fi
 
 # Oh My Posh
