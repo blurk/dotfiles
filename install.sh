@@ -61,5 +61,9 @@ mv ~/.zshrc ~/.zshrc.backup
 # Apply dotfiles with stow
 stow .
 
+git config --global user.name "blurk"
+git config --global user.email "nsinh6745@gmail.com"
+
 # Switch to zsh at the end
+chsh -s $(which zsh)
 exec zsh
