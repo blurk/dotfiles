@@ -4,5 +4,5 @@ alias la='ls -A'
 alias l='ls -CF'
 alias cls='clear'
 alias c='clear'
-alias my-update='cd ~/dotfiles/ && ./update.sh'
+alias my-update='~/dotfiles/update.sh'
 
