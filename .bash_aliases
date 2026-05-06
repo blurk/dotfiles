@@ -5,4 +5,4 @@ alias l='ls -CF'
 alias cls='clear'
 alias c='clear'
 alias my-update='~/dotfiles/update.sh'
-
+alias air='~/go/bin/air'
