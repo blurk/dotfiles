@@ -1,23 +1,12 @@
-vim.lsp.enable({
-	"css-lsp",
-	"css-variables-language-server",
-	"cssmodules-language-server",
-	"docker-compose-language-service",
-	"docker-language-server",
-	"dockerfile-language-server",
-	"eslint-lsp",
-	"gopls",
-	"html-lsp",
-	"json-lsp",
-	"jsonlint",
-	"lua-language-server",
-	"prettier",
-	"shellcheck",
-	"shfmt",
-	"stylua",
-	"tailwindcss-language-server",
-	"typescript-language-server",
+vim.lsp.config("gopls", {
+  cmd = { "gopls" },
+  filetypes = { "go" },
+  root_dir = vim.fs.root(0, { "go.mod", ".git" }),
 })
+
+vim.lsp.enable("gopls")
+
+-- Configure diagnostic display
 
 vim.diagnostic.config({
 	float = {
@@ -28,9 +17,9 @@ vim.diagnostic.config({
 		header = "",
 		prefix = "",
 	},
-	virtual_text = false,
-	virtual_lines = false,
-	signs = {
+	virtual_text = true,-- inline messages
+	virtual_lines = false, -- diagnostics as extra lines below the affected line
+	signs = { -- gutter icons
 		text = {
 			[vim.diagnostic.severity.ERROR] = " ",
 			[vim.diagnostic.severity.WARN] = " ",
@@ -38,13 +27,7 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.INFO] = " ",
 		},
 	},
-	underline = true,
+	underline = true,-- underline problematic code
 	update_in_insert = false,
 	severity_sort = true,
-})
-
-local lsp_capabilities = vim.lsp.protocol.make_client_capabilities()
-
-vim.lsp.config("*", {
-	capabilities = lsp_capabilities,
 })
