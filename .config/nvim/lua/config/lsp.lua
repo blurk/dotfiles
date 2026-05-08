@@ -1,13 +1,4 @@
-vim.lsp.config("gopls", {
-  cmd = { "gopls" },
-  filetypes = { "go" },
-  root_dir = vim.fs.root(0, { "go.mod", ".git" }),
-})
-
-vim.lsp.enable("gopls")
-
 -- Configure diagnostic display
-
 vim.diagnostic.config({
 	float = {
 		focusable = true,
@@ -19,15 +10,18 @@ vim.diagnostic.config({
 	},
 	virtual_text = true,-- inline messages
 	virtual_lines = false, -- diagnostics as extra lines below the affected line
-	signs = { -- gutter icons
-		text = {
-			[vim.diagnostic.severity.ERROR] = " ",
-			[vim.diagnostic.severity.WARN] = " ",
-			[vim.diagnostic.severity.HINT] = " ",
-			[vim.diagnostic.severity.INFO] = " ",
-		},
-	},
+	signs = true, -- gutter icons
 	underline = true,-- underline problematic code
 	update_in_insert = false,
 	severity_sort = true,
 })
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+vim.lsp.config("gopls", {
+  cmd = { "gopls" },
+  filetypes = { "go" },
+  root_dir = vim.fs.root(0, { "go.mod", ".git" }),
+  capabilities = capabilities,
+})
+vim.lsp.enable("gopls")
