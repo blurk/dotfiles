@@ -2,11 +2,6 @@ return { "catppuccin/nvim", name = "catppuccin", priority = 1000, config = funct
 
 vim.cmd.colorscheme("catppuccin-mocha")
 local cat = require("catppuccin")
-cat.options.transparent_background = true
-cat.options.float = {
-	transparent = true,
-	solid = true,
-}
 
 cat.compile()
 vim.cmd.colorscheme(vim.g.colors_name)
