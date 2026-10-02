@@ -75,5 +75,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/go/bin:$PATH"
 
+export PATH="$HOME/lua-language-server/bin:$PATH"
+
 # . "$HOME/.local/bin/env"
 
