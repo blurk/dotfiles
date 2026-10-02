@@ -6,24 +6,23 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
     },
-    opts = function(_, opts)
+    opts = function()
       local cmp = require("cmp")
 
-      opts.mapping = cmp.mapping.preset.insert({
+      return {
+        mapping = cmp.mapping.preset.insert({
 				["<C-Space>"] = cmp.mapping.complete(),
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-      })
-
-      opts.sources = cmp.config.sources({
+      }),
+      sources = cmp.config.sources({
         { name = "nvim_lsp" },
-      }, {
         { name = "buffer" },
         { name = "path" },
       })
+      }
 
-      return opts
     end,
   },
 }
